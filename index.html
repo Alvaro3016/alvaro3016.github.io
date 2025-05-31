@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álvaro - My Personal Portfolio</title>
+    <title>Álvaro - Full-Stack & Cybersecurity</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-</head>
+    </head>
 <body>
 
+    <div id="particles-js"></div>
+
     <header>
-        <div class="container">
-            <h1>Álvaro</h1>
-            <p>Developer & Cybersecurity Specialist 💪</p>
+        <div class="container header-content">
+            <div class="logo">Álvaro</div>
             <nav>
                 <ul>
-                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -25,13 +26,24 @@
     </header>
 
     <main>
-        <section id="about" class="container">
+        <section id="hero" class="container hero-section">
+            <div class="hero-text">
+                <h1>Álvaro</h1>
+                <p>Full-Stack Developer & Cybersecurity Specialist 💪</p>
+                <a href="#projects" class="button primary-button">Explore My Work</a>
+                <a href="#contact" class="button secondary-button">Get in Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/your-photo.jpg" alt="Your profile picture" class="profile-pic-hero">
+            </div>
+        </section>
+
+        <section id="about" class="container glass-card">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="img/your-photo.jpg" alt="Your profile picture" class="profile-pic">
                 <p>
-                    Hi there! I'm Álvaro, a tech enthusiast with a strong focus on full-stack development and cybersecurity.
-                    My journey in the digital world has allowed me to merge creativity with logic.
+                    Hi there! I'm Álvaro, a tech enthusiast with a strong focus on **full-stack development** and **cybersecurity**.
+                    My journey in the digital world has allowed me to fuse creativity with logic.
                     I enjoy building intuitive and functional web interfaces with **HTML**, while my proficiency in **Python** enables me
                     to create everything from powerful scripts to interactive Discord bots using `discord.py`.
                 </p>
@@ -48,7 +60,7 @@
             </div>
         </section>
 
-        <section id="skills" class="container">
+        <section id="skills" class="container glass-card">
             <h2>My Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item">
@@ -88,7 +100,7 @@
             </div>
         </section>
 
-        <section id="projects" class="container">
+        <section id="projects" class="container glass-card">
             <h2>My Recent Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
@@ -99,7 +111,7 @@
                         Here you can mention key technologies used (e.g., "Developed with HTML, CSS, and JavaScript for an interactive interface").
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/your-username/repo-name-1" target="_blank" class="button">View on GitHub</a>
+                        <a href="https://github.com/your-username/repo-name-1" target="_blank" class="button project-button">View on GitHub</a>
                         </div>
                 </div>
 
@@ -112,7 +124,7 @@
                         and simple games for the community.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/your-username/my-assistant-bot-repo" target="_blank" class="button">View on GitHub</a>
+                        <a href="https://github.com/your-username/my-assistant-bot-repo" target="_blank" class="button project-button">View on GitHub</a>
                     </div>
                 </div>
 
@@ -125,14 +137,14 @@
                         and applied hardening principles to enhance overall system security.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/your-username/network-security-analysis-repo" target="_blank" class="button">View on GitHub</a>
+                        <a href="https://github.com/your-username/network-security-analysis-repo" target="_blank" class="button project-button">View on GitHub</a>
                     </div>
                 </div>
 
                 </div>
         </section>
 
-        <section id="contact" class="container">
+        <section id="contact" class="container glass-card">
             <h2>Contact Me</h2>
             <p>I'm available for interesting project collaborations or new opportunities. Feel free to get in touch!</p>
             <div class="contact-info">
@@ -150,6 +162,57 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize particles.js
+        particlesJS('particles-js',
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "direction": "none",
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    }
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
 </body>
 </html>

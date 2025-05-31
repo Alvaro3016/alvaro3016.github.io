@@ -1,15 +1,253 @@
-/* ... (el código anterior del style.css) ... */
+/* --- Variables CSS --- */
+:root {
+    --primary-gradient-start: #8e2de2; /* Morado intenso */
+    --primary-gradient-end: #4a00e0;   /* Azul eléctrico */
+    --text-dark: #333333; /* Color de texto principal: negro oscuro */
+    --text-medium: #555555; /* Un gris más suave para descripciones, etc. */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --dark-section-bg: rgba(0, 0, 0, 0.15); /* Fondo oscuro para secciones tipo glassmorphism */
+    --accent-color: #3498db; /* Azul vibrante para acentos */
+    --light-glass-bg: rgba(255, 255, 255, 0.8); /* Fondo claro para glassmorphism */
+    --light-border: rgba(255, 255, 255, 0.4); /* Borde claro para glassmorphism */
+}
+
+/* --- Reseteo y Estilos Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif; /* Asegúrate de que Poppins esté importado o usa Arial */
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto principal oscuro** */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    background-attachment: fixed; /* Mantiene el gradiente fijo al hacer scroll */
+}
+
+/* --- Particles.js --- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+/* --- Contenedor General para contenido principal --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Estilo Glassmorphism para tarjetas y secciones --- */
+.glass-card {
+    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo más claro para Glassmorphism** */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde más claro** */
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto oscuro para las tarjetas** */
+}
+
+/* --- Header --- */
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de header más claro** */
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    border-bottom: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de header más claro** */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Mantenemos este gradiente en el logo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Sombra oscura para pop */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de navegación oscuro** */
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Fondo oscuro transparente al pasar el ratón */
+    color: var(--accent-color);
+}
+
+/* --- Main Content Sections --- */
+main {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8em;
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Títulos de sección oscuros** */
+    margin-bottom: 40px;
+    position: relative;
+    padding-top: 20px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2); /* Sombra clara para que destaque */
+}
 
 h2::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #3498db;
-    margin: 10px auto 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ffe53b, #ff2525);
+    margin: 15px auto 0;
+    border-radius: 2px;
 }
 
-/* "About Me" Section */
+/* --- Hero Section --- */
+.hero-section {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: var(--text-light); /* **Mantiene texto blanco para la sección Hero** */
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ffe53b, #ff2525);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+    animation: pop 1s ease-out;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    max-width: 700px;
+    opacity: 0.9;
+    animation: fadeIn 1.5s ease;
+}
+
+.profile-pic-hero {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-top: 40px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic-hero:hover {
+    transform: scale(1.05);
+}
+
+/* --- Botones --- */
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    margin: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.primary-button {
+    background: linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    color: white; /* El texto del botón primary sigue siendo blanco para contrastar con el gradiente */
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #6c23b2, #3900b2);
+}
+
+.secondary-button {
+    background: rgba(0, 0, 0, 0.2); /* **CAMBIO AQUÍ: Fondo de botón secundario oscuro** */
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de botón secundario oscuro** */
+    border: 1px solid rgba(0, 0, 0, 0.4); /* **CAMBIO AQUÍ: Borde de botón secundario oscuro** */
+}
+
+.secondary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.project-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+    background: var(--accent-color);
+    color: white; /* El texto del botón de proyecto sigue siendo blanco */
+    box-shadow: none;
+}
+
+.project-button:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- "About Me" Section --- */
 .about-content {
     display: flex;
     flex-direction: column;
@@ -17,47 +255,42 @@ h2::after {
     text-align: center;
 }
 
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    border: 4px solid #3498db;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
 .about-content p {
     max-width: 800px;
     margin: 15px auto;
     font-size: 1.1em;
+    color: var(--text-medium); /* **CAMBIO AQUÍ: Texto de párrafo más oscuro** */
+    opacity: 1; /* Quitamos opacidad si el texto es oscuro */
 }
 
-/* Skills Section */
+/* --- Skills Section --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 30px;
 }
 
 .skill-item {
-    background-color: #fff;
+    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de item de habilidad más claro** */
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de item de habilidad más claro** */
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.9); /* **CAMBIO AQUÍ: Más sólido al pasar el ratón** */
 }
 
 .skill-item h3 {
-    color: #3498db;
-    font-size: 1.5em;
-    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-size: 1.6em;
+    margin-bottom: 20px;
 }
 
 .skill-item ul {
@@ -67,15 +300,16 @@ h2::after {
 }
 
 .skill-item li {
-    background-color: #ecf0f1;
-    padding: 8px 15px;
-    margin: 8px 0;
-    border-radius: 5px;
-    font-size: 0.95em;
-    color: #555;
+    background: rgba(0, 0, 0, 0.05); /* **CAMBIO AQUÍ: Fondo más oscuro para listas** */
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de lista oscuro** */
+    border: 1px solid rgba(0, 0, 0, 0.08); /* **CAMBIO AQUÍ: Borde más oscuro para listas** */
 }
 
-/* Projects Section */
+/* --- Projects Section --- */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -83,16 +317,19 @@ h2::after {
 }
 
 .project-card {
-    background-color: #fff;
-    border-radius: 10px;
+    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de tarjeta de proyecto más claro** */
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de tarjeta de proyecto más claro** */
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    background: rgba(255, 255, 255, 0.9); /* **CAMBIO AQUÍ: Más sólido al pasar el ratón** */
 }
 
 .project-card img {
@@ -100,19 +337,19 @@ h2::after {
     height: 220px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* **CAMBIO AQUÍ: Borde de imagen más oscuro** */
 }
 
 .project-card h3 {
-    color: #2c3e50;
-    font-size: 1.6em;
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Título de tarjeta de proyecto oscuro** */
+    font-size: 1.8em;
     margin: 20px 0 10px;
     padding: 0 15px;
 }
 
 .project-description {
     font-size: 0.95em;
-    color: #666;
+    color: var(--text-medium); /* **CAMBIO AQUÍ: Descripción de proyecto más oscura** */
     padding: 0 20px;
     margin-bottom: 20px;
 }
@@ -121,30 +358,8 @@ h2::after {
     padding: 0 20px 25px;
 }
 
-.button {
-    display: inline-block;
-    background-color: #3498db;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
 
-.button:hover {
-    background-color: #2980b9;
-}
-
-.button-secondary {
-    background-color: #95a5a6; /* A darker gray */
-}
-
-.button-secondary:hover {
-    background-color: #7f8c8d;
-}
-
-/* Contact Section */
+/* --- Contact Section --- */
 .contact-info {
     text-align: center;
     margin-top: 30px;
@@ -153,74 +368,135 @@ h2::after {
 .contact-info p {
     font-size: 1.1em;
     margin-bottom: 10px;
+    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de contacto oscuro** */
 }
 
 .contact-info a {
-    color: #3498db;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
     text-decoration: underline;
+    color: #00bcd4;
 }
 
-/* Footer */
+/* --- Footer --- */
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    color: rgba(255, 255, 255, 0.8); /* Mantenemos el texto del footer un poco más claro para contraste con su fondo */
     text-align: center;
     padding: 2em 0;
     font-size: 0.9em;
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
 }
 
-/* Media Queries for responsive design */
+/* --- Animations (no cambian, ya están bien) --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* --- Media Queries for responsive design (no cambian) --- */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3.5em;
+    }
+    .hero-text p {
+        font-size: 1.3em;
+    }
+    .glass-card {
+        padding: 30px;
+        margin: 0 15px 30px;
+    }
+    .skill-item, .project-card {
+        padding: 25px;
+    }
+}
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2em;
+    header {
+        padding: 15px 20px;
     }
-
-    nav ul li {
-        margin: 0 8px;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    .about-content {
+    .header-content {
         flex-direction: column;
     }
-
-    .profile-pic {
+    .logo {
+        margin-bottom: 15px;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav a {
+        padding: 6px 12px;
+    }
+    .hero-section {
+        min-height: 80vh;
+        padding-top: 80px;
+    }
+    .hero-text h1 {
+        font-size: 2.8em;
+    }
+    .hero-text p {
+        font-size: 1.1em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    .button {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    .profile-pic-hero {
         width: 150px;
         height: 150px;
-    }
-
-    .skills-grid, .project-grid {
-        grid-template-columns: 1fr; /* One column on small screens */
-    }
-
-    .project-card img {
-        height: 180px;
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em;
+    .container {
+        padding: 10px;
     }
-    header p {
-        font-size: 1em;
+    header {
+        padding: 10px 15px;
+    }
+    .logo {
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
     }
-    section {
-        padding: 40px 0;
+    .hero-text h1 {
+        font-size: 2.2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .glass-card {
+        padding: 20px;
     }
     h2 {
         font-size: 1.8em;
+    }
+    .skill-item h3 {
+        font-size: 1.4em;
+    }
+    .project-card h3 {
+        font-size: 1.5em;
+    }
+    .project-links {
+        padding: 0 15px 20px;
     }
 }
