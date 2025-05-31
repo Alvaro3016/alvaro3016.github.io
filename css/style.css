@@ -21,11 +21,11 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Poppins', sans-serif; /* Asegúrate de que Poppins esté importado o usa Arial */
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto principal oscuro** */
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    font-family: 'Roboto', sans-serif; /* **CAMBIO AQUÍ: Usamos Roboto** */
+    color: var(--text-dark);
+    overflow-x: hidden;
     background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-    background-attachment: fixed; /* Mantiene el gradiente fijo al hacer scroll */
+    background-attachment: fixed;
 }
 
 /* --- Particles.js --- */
@@ -50,14 +50,14 @@ html, body {
 
 /* --- Estilo Glassmorphism para tarjetas y secciones --- */
 .glass-card {
-    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo más claro para Glassmorphism** */
+    background: var(--light-glass-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde más claro** */
+    border: 1px solid var(--light-border);
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 40px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto oscuro para las tarjetas** */
+    color: var(--text-dark);
 }
 
 /* --- Header --- */
@@ -69,10 +69,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de header más claro** */
+    background: var(--light-glass-bg);
     backdrop-filter: blur(10px);
     z-index: 10;
-    border-bottom: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de header más claro** */
+    border-bottom: 1px solid var(--light-border);
 }
 
 .header-content {
@@ -84,13 +84,13 @@ header {
 
 .logo {
     font-size: 28px;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ff9a9e, #fad0c4); /* Mantenemos este gradiente en el logo */
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita más pronunciada para el logo** */
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Sombra oscura para pop */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
 nav ul {
@@ -106,15 +106,15 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de navegación oscuro** */
-    font-weight: 500;
+    color: var(--text-dark);
+    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para enlaces de navegación** */
     padding: 8px 16px;
     border-radius: 12px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background: rgba(0, 0, 0, 0.1); /* Fondo oscuro transparente al pasar el ratón */
+    background: rgba(0, 0, 0, 0.1);
     color: var(--accent-color);
 }
 
@@ -131,11 +131,12 @@ section {
 
 h2 {
     font-size: 2.8em;
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Títulos de sección oscuros** */
+    color: var(--text-dark);
     margin-bottom: 40px;
     position: relative;
     padding-top: 20px;
-    text-shadow: 0 0 5px rgba(255,255,255,0.2); /* Sombra clara para que destaque */
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de sección** */
 }
 
 h2::after {
@@ -157,7 +158,7 @@ h2::after {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    color: var(--text-light); /* **Mantiene texto blanco para la sección Hero** */
+    color: var(--text-light); /* Se mantiene blanco para el Hero */
 }
 
 .hero-text h1 {
@@ -170,6 +171,7 @@ h2::after {
     color: transparent;
     text-shadow: 0 0 15px rgba(255,255,255,0.4);
     animation: pop 1s ease-out;
+    font-weight: 900; /* **CAMBIO AQUÍ: Negrita extra para el título principal del Hero** */
 }
 
 .hero-text p {
@@ -178,6 +180,7 @@ h2::after {
     max-width: 700px;
     opacity: 0.9;
     animation: fadeIn 1.5s ease;
+    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para el párrafo del Hero** */
 }
 
 .profile-pic-hero {
@@ -203,7 +206,7 @@ h2::after {
     border: none;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para todos los botones** */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     margin: 10px;
@@ -212,7 +215,7 @@ h2::after {
 
 .primary-button {
     background: linear-gradient(45deg, var(--primary-gradient-start), var(--primary-gradient-end));
-    color: white; /* El texto del botón primary sigue siendo blanco para contrastar con el gradiente */
+    color: white;
 }
 
 .primary-button:hover {
@@ -222,9 +225,9 @@ h2::after {
 }
 
 .secondary-button {
-    background: rgba(0, 0, 0, 0.2); /* **CAMBIO AQUÍ: Fondo de botón secundario oscuro** */
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de botón secundario oscuro** */
-    border: 1px solid rgba(0, 0, 0, 0.4); /* **CAMBIO AQUÍ: Borde de botón secundario oscuro** */
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
 .secondary-button:hover {
@@ -237,7 +240,7 @@ h2::after {
     padding: 10px 20px;
     font-size: 0.9em;
     background: var(--accent-color);
-    color: white; /* El texto del botón de proyecto sigue siendo blanco */
+    color: white;
     box-shadow: none;
 }
 
@@ -259,8 +262,9 @@ h2::after {
     max-width: 800px;
     margin: 15px auto;
     font-size: 1.1em;
-    color: var(--text-medium); /* **CAMBIO AQUÍ: Texto de párrafo más oscuro** */
-    opacity: 1; /* Quitamos opacidad si el texto es oscuro */
+    color: var(--text-medium);
+    opacity: 1;
+    font-weight: 400; /* **CAMBIO AQUÍ: Normal para párrafos largos, por legibilidad** */
 }
 
 /* --- Skills Section --- */
@@ -272,9 +276,9 @@ h2::after {
 }
 
 .skill-item {
-    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de item de habilidad más claro** */
+    background: var(--light-glass-bg);
     backdrop-filter: blur(8px);
-    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de item de habilidad más claro** */
+    border: 1px solid var(--light-border);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
@@ -284,13 +288,14 @@ h2::after {
 
 .skill-item:hover {
     transform: translateY(-7px);
-    background: rgba(255, 255, 255, 0.9); /* **CAMBIO AQUÍ: Más sólido al pasar el ratón** */
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .skill-item h3 {
     color: var(--accent-color);
     font-size: 1.6em;
     margin-bottom: 20px;
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de habilidad** */
 }
 
 .skill-item ul {
@@ -300,13 +305,14 @@ h2::after {
 }
 
 .skill-item li {
-    background: rgba(0, 0, 0, 0.05); /* **CAMBIO AQUÍ: Fondo más oscuro para listas** */
+    background: rgba(0, 0, 0, 0.05);
     padding: 10px 15px;
     margin: 10px 0;
     border-radius: 8px;
     font-size: 1em;
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de lista oscuro** */
-    border: 1px solid rgba(0, 0, 0, 0.08); /* **CAMBIO AQUÍ: Borde más oscuro para listas** */
+    color: var(--text-dark);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para elementos de lista** */
 }
 
 /* --- Projects Section --- */
@@ -317,9 +323,9 @@ h2::after {
 }
 
 .project-card {
-    background: var(--light-glass-bg); /* **CAMBIO AQUÍ: Fondo de tarjeta de proyecto más claro** */
+    background: var(--light-glass-bg);
     backdrop-filter: blur(8px);
-    border: 1px solid var(--light-border); /* **CAMBIO AQUÍ: Borde de tarjeta de proyecto más claro** */
+    border: 1px solid var(--light-border);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
@@ -329,7 +335,7 @@ h2::after {
 
 .project-card:hover {
     transform: translateY(-7px);
-    background: rgba(255, 255, 255, 0.9); /* **CAMBIO AQUÍ: Más sólido al pasar el ratón** */
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .project-card img {
@@ -337,21 +343,23 @@ h2::after {
     height: 220px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* **CAMBIO AQUÍ: Borde de imagen más oscuro** */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .project-card h3 {
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Título de tarjeta de proyecto oscuro** */
+    color: var(--text-dark);
     font-size: 1.8em;
     margin: 20px 0 10px;
     padding: 0 15px;
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de proyecto** */
 }
 
 .project-description {
     font-size: 0.95em;
-    color: var(--text-medium); /* **CAMBIO AQUÍ: Descripción de proyecto más oscura** */
+    color: var(--text-medium);
     padding: 0 20px;
     margin-bottom: 20px;
+    font-weight: 400; /* **CAMBIO AQUÍ: Normal para descripciones de proyecto** */
 }
 
 .project-links {
@@ -368,13 +376,14 @@ h2::after {
 .contact-info p {
     font-size: 1.1em;
     margin-bottom: 10px;
-    color: var(--text-dark); /* **CAMBIO AQUÍ: Texto de contacto oscuro** */
+    color: var(--text-dark);
+    font-weight: 400; /* **CAMBIO AQUÍ: Normal para texto de contacto** */
 }
 
 .contact-info a {
     color: var(--accent-color);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para enlaces de contacto** */
     transition: color 0.3s ease;
 }
 
@@ -387,13 +396,14 @@ h2::after {
 footer {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
-    color: rgba(255, 255, 255, 0.8); /* Mantenemos el texto del footer un poco más claro para contraste con su fondo */
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 2em 0;
     font-size: 0.9em;
     position: relative;
     z-index: 1;
     margin-top: 40px;
+    font-weight: 400; /* **CAMBIO AQUÍ: Normal para el footer** */
 }
 
 /* --- Animations (no cambian, ya están bien) --- */
