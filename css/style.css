@@ -1,14 +1,15 @@
 /* --- Variables CSS --- */
 :root {
     --primary-gradient-start: #8e2de2; /* Morado intenso */
-    --primary-gradient-end: #4a00e0;   /* Azul eléctrico */
+    --primary-gradient-end: #4a00e0;   /* Azul eléctrico fuerte (lo usaremos para el púrpura fuerte) */
     --text-dark: #333333; /* Color de texto principal: negro oscuro */
     --text-medium: #555555; /* Un gris más suave para descripciones, etc. */
     --glass-bg: rgba(255, 255, 255, 0.1);
     --dark-section-bg: rgba(0, 0, 0, 0.15); /* Fondo oscuro para secciones tipo glassmorphism */
-    --accent-color: #3498db; /* Azul vibrante para acentos */
+    --accent-color: #3498db; /* Azul vibrante para acentos (se mantiene) */
     --light-glass-bg: rgba(255, 255, 255, 0.8); /* Fondo claro para glassmorphism */
     --light-border: rgba(255, 255, 255, 0.4); /* Borde claro para glassmorphism */
+    --strong-purple-text: #4a00e0; /* Nuevo: Definido explícitamente para el púrpura fuerte */
 }
 
 /* --- Reseteo y Estilos Base --- */
@@ -21,8 +22,8 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif; /* **CAMBIO AQUÍ: Usamos Roboto** */
-    color: var(--text-dark);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark); /* Color de texto base, negro oscuro */
     overflow-x: hidden;
     background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
     background-attachment: fixed;
@@ -84,12 +85,12 @@ header {
 
 .logo {
     font-size: 28px;
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita más pronunciada para el logo** */
+    font-weight: 900;
     background: linear-gradient(45deg, #ff9a9e, #fad0c4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
+    color: transparent; /* Esto lo hace invisible a menos que haya gradiente */
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
 }
 
@@ -107,7 +108,7 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: var(--text-dark);
-    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para enlaces de navegación** */
+    font-weight: 500; /* Seminegrita */
     padding: 8px 16px;
     border-radius: 12px;
     transition: background 0.3s ease, color 0.3s ease;
@@ -131,12 +132,12 @@ section {
 
 h2 {
     font-size: 2.8em;
-    color: var(--text-dark);
+    color: var(--strong-purple-text); /* PÚRPURA FUERTE */
     margin-bottom: 40px;
     position: relative;
     padding-top: 20px;
     text-shadow: 0 0 5px rgba(255,255,255,0.2);
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de sección** */
+    font-weight: 700; /* Negrita */
 }
 
 h2::after {
@@ -168,10 +169,10 @@ h2::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
+    color: transparent; /* Esto lo hace invisible a menos que haya gradiente */
     text-shadow: 0 0 15px rgba(255,255,255,0.4);
     animation: pop 1s ease-out;
-    font-weight: 900; /* **CAMBIO AQUÍ: Negrita extra para el título principal del Hero** */
+    font-weight: 900; /* Negrita extra */
 }
 
 .hero-text p {
@@ -180,7 +181,7 @@ h2::after {
     max-width: 700px;
     opacity: 0.9;
     animation: fadeIn 1.5s ease;
-    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para el párrafo del Hero** */
+    font-weight: 500; /* Seminegrita */
 }
 
 .profile-pic-hero {
@@ -206,7 +207,7 @@ h2::after {
     border: none;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para todos los botones** */
+    font-weight: 700; /* Negrita */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     margin: 10px;
@@ -236,7 +237,7 @@ h2::after {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.project-button {
+.project-button { /* Se mantiene para certificados si lo usas */
     padding: 10px 20px;
     font-size: 0.9em;
     background: var(--accent-color);
@@ -249,6 +250,7 @@ h2::after {
     transform: translateY(-2px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* --- "About Me" Section --- */
 .about-content {
@@ -264,7 +266,7 @@ h2::after {
     font-size: 1.1em;
     color: var(--text-medium);
     opacity: 1;
-    font-weight: 400; /* **CAMBIO AQUÍ: Normal para párrafos largos, por legibilidad** */
+    font-weight: 400; /* Normal */
 }
 
 /* --- Skills Section --- */
@@ -292,10 +294,10 @@ h2::after {
 }
 
 .skill-item h3 {
-    color: var(--accent-color);
+    color: var(--strong-purple-text); /* PÚRPURA FUERTE */
     font-size: 1.6em;
     margin-bottom: 20px;
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de habilidad** */
+    font-weight: 700; /* Negrita */
 }
 
 .skill-item ul {
@@ -312,203 +314,7 @@ h2::after {
     font-size: 1em;
     color: var(--text-dark);
     border: 1px solid rgba(0, 0, 0, 0.08);
-    font-weight: 500; /* **CAMBIO AQUÍ: Seminegrita para elementos de lista** */
-}
-
-/* --- Projects Section --- */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background: var(--light-glass-bg);
-    backdrop-filter: blur(8px);
-    border: 1px solid var(--light-border);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-7px);
-    background: rgba(255, 255, 255, 0.9);
-}
-
-.project-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-    color: var(--text-dark);
-    font-size: 1.8em;
-    margin: 20px 0 10px;
-    padding: 0 15px;
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para títulos de proyecto** */
-}
-
-.project-description {
-    font-size: 0.95em;
-    color: var(--text-medium);
-    padding: 0 20px;
-    margin-bottom: 20px;
-    font-weight: 400; /* **CAMBIO AQUÍ: Normal para descripciones de proyecto** */
-}
-
-.project-links {
-    padding: 0 20px 25px;
-}
-
-
-/* --- Contact Section --- */
-.contact-info {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.contact-info p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    color: var(--text-dark);
-    font-weight: 400; /* **CAMBIO AQUÍ: Normal para texto de contacto** */
-}
-
-.contact-info a {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 700; /* **CAMBIO AQUÍ: Negrita para enlaces de contacto** */
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-    color: #00bcd4;
-}
-
-/* --- Footer --- */
-footer {
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 2em 0;
-    font-size: 0.9em;
-    position: relative;
-    z-index: 1;
-    margin-top: 40px;
-    font-weight: 400; /* **CAMBIO AQUÍ: Normal para el footer** */
-}
-
-/* --- Animations (no cambian, ya están bien) --- */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pop {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* --- Media Queries for responsive design (no cambian) --- */
-@media (max-width: 992px) {
-    .hero-text h1 {
-        font-size: 3.5em;
-    }
-    .hero-text p {
-        font-size: 1.3em;
-    }
-    .glass-card {
-        padding: 30px;
-        margin: 0 15px 30px;
-    }
-    .skill-item, .project-card {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-    .header-content {
-        flex-direction: column;
-    }
-    .logo {
-        margin-bottom: 15px;
-    }
-    nav ul li {
-        margin: 0 10px;
-    }
-    nav a {
-        padding: 6px 12px;
-    }
-    .hero-section {
-        min-height: 80vh;
-        padding-top: 80px;
-    }
-    .hero-text h1 {
-        font-size: 2.8em;
-    }
-    .hero-text p {
-        font-size: 1.1em;
-    }
-    h2 {
-        font-size: 2.2em;
-    }
-    .button {
-        padding: 12px 25px;
-        font-size: 0.9em;
-    }
-    .profile-pic-hero {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 10px;
-    }
-    header {
-        padding: 10px 15px;
-    }
-    .logo {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-    nav ul li {
-        display: block;
-        margin: 8px 0;
-    }
-    .hero-text h1 {
-        font-size: 2.2em;
-    }
-    .hero-text p {
-        font-size: 1em;
-    }
-    .glass-card {
-        padding: 20px;
-    }
-    h2 {
-        font-size: 1.8em;
-    }
-    .skill-item h3 {
-        font-size: 1.4em;
-    }
-    .project-card h3 {
-        font-size: 1.5em;
-    }
-    .project-links {
-        padding: 0 15px 20px;
-    }
+    font-weight: 500; /* Seminegrita */
 }
 
 /* --- Certificates Section --- */
@@ -520,53 +326,9 @@ footer {
 }
 
 .certificate-item {
-    background: var(--light-glass-bg); /* Fondo claro de glassmorphism */
+    background: var(--light-glass-bg);
     backdrop-filter: blur(8px);
     border: 1px solid var(--light-border);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.certificate-item:hover {
-    transform: translateY(-7px);
-    background: rgba(255, 255, 255, 0.9); /* Más sólido al pasar el ratón */
-}
-
-.certificate-img {
-    width: 100%;
-    height: 180px; /* Altura fija para las imágenes de certificado */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.certificate-item h3 {
-    color: var(--text-dark);
-    font-size: 1.6em;
-    margin: 20px 0 10px;
-    padding: 0 15px;
-    font-weight: 700;
-}
-
-.certificate-issuer,
-.certificate-date {
-    font-size: 0.9em;
-    color: var(--text-medium);
-    padding: 0 15px;
-    margin-bottom: 5px;
-}
-
-.certificate-links {
-    padding: 0 20px 25px;
-    margin-top: 20px;
-}
-
-/* Media Queries for responsive design - Add adjustments for certificates here if needed */
-@media (max-width: 480px) {
-    .certificate-item h3 {
-        font-size: 1.4em;
-    }
-}
+    box-shadow: 0 6px 20px rgba(0,0,0,
