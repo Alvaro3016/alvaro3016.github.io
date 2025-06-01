@@ -264,10 +264,10 @@ h2::after {
     max-width: 800px;
     margin: 15px auto;
     font-size: 1.1em;
-    color: var(--text-medium);
+    color: var(--text-dark);
     opacity: 1;
-    font-weight: 400; /* Normal */
-}
+    font-weight: 700; /* Normal */
+}   
 
 /* --- Skills Section --- */
 .skills-grid {
