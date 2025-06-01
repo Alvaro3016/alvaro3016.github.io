@@ -1,0 +1,59 @@
+[33mcommit cc22365ea04b528b302a125e170b5f7007558a32[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sun Jun 1 19:02:07 2025 +0200
+
+    Applied bold font-weight to About Me section paragraphs
+
+[33mcommit 6e996cc5707d5bf950076ef9fe90192b7b97f6bc[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sun Jun 1 18:58:07 2025 +0200
+
+    Discord and 3 bugs lol
+
+[33mcommit 6a11824340e0ae504046991d2fd4489190280450[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sun Jun 1 18:51:53 2025 +0200
+
+    Email check and more...
+
+[33mcommit 1afc728ee440724030c0f1e1e13b954e10edfd0f[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 22:31:51 2025 +0200
+
+    Added Google AI certificate PDF and thumbnail link
+
+[33mcommit e1287e3cad7b1843d2ab8d7150074ce3685bd461[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 22:22:21 2025 +0200
+
+    Added 'Certificates' section with new styles and content
+
+[33mcommit 77b1602ad2bbc1064dde413990cf79fb35d85246[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 22:18:28 2025 +0200
+
+    Finalized index.html with Roboto font, dark text, and modern styling
+
+[33mcommit 61ea169003fe98ce08553c20d1527fe597f73dee[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 22:08:41 2025 +0200
+
+    Updated portfolio with modern design and particles
+
+[33mcommit f312fdf016dd3322e7db0b2a78e3a2c15db942a8[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 22:01:35 2025 +0200
+
+    Added initial portfolio template
+
+[33mcommit 88a31be866d4df5e0bcb48346e784c1d0b000c5b[m
+Author: Álvaro <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 21:42:18 2025 +0200
+
+    Primera versión de mi portafolio
+
+[33mcommit b35ed9623b1611228afb0d206524ef6e48cfc0d3[m
+Author: Álvaro Fernández <alvaro.fg.5000@gmail.com>
+Date:   Sat May 31 21:32:33 2025 +0200
+
+    Initial commit
